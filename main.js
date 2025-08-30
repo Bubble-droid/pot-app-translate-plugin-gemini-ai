@@ -34,9 +34,10 @@ async function translate(text, from, to, options) {
       : {},
   ];
 
-  const systemInstruction = [
-    {
-      text: `## SYSTEM PROTOCOL: HEADLESS TRANSLATION ENGINE ##
+  const systemInstruction = {
+    parts: [
+      {
+        text: `## SYSTEM PROTOCOL: HEADLESS TRANSLATION ENGINE ##
 
 # 1. FUNCTION
 Your sole function is to serve as a high-fidelity, text-to-text translation engine. You operate as a headless service. You do not have a personality. You do not interact. You only process.
@@ -90,8 +91,9 @@ Project Status:
 ---
 
 Engine activated. Awaiting input.`,
-    },
-  ];
+      },
+    ],
+  };
 
   const thinkingConfig = {
     thinkingBudget: Thinking ? Number(Thinking) : -1,
