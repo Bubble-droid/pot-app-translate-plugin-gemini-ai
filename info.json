@@ -1,36 +1,66 @@
 {
-  "id": "plugin.com.pot-app.lingva",
+  "id": "plugin.bubble.translate-gemini-ai",
   "plugin_type": "translate",
-  "icon": "lingva.svg",
-  "display": "Lingva",
-  "homepage": "https://github.com/pot-app/pot-app-translate-plugin-template",
-  "needs": [{ "key": "requestPath", "display": "请求地址" }],
+  "icon": "gemini-ai.svg",
+  "display": "Gemini AI 翻译",
+  "homepage": "https://github.com/Bubble-droid/pot-app-translate-plugin-gemini-ai",
+  "needs": [
+    {
+      "key": "modelName",
+      "display": "Gemini 模型（默认 gemini-2.5-flash-lite）",
+      "type": "input"
+    },
+    {
+      "key": "apiKey",
+      "display": "Gemini API 密钥（必填）",
+      "type": "input"
+    },
+    {
+      "key": "googleSearch",
+      "display": "谷歌搜索",
+      "type": "select",
+      "options": {
+        "false": "禁用",
+        "true": "启用"
+      }
+    },
+    {
+      "key": "Thinking",
+      "display": "思考预算（0 为禁用，-1 为动态）",
+      "type": "input"
+    },
+    {
+      "key": "temperature（0.0-2.0）",
+      "display": "温度",
+      "type": "input"
+    }
+  ],
   "language": {
-    "auto": "auto",
-    "zh_cn": "zh",
-    "zh_tw": "zh_HANT",
-    "en": "en",
-    "ja": "ja",
-    "ko": "ko",
-    "fr": "fr",
-    "es": "es",
-    "ru": "ru",
-    "de": "de",
-    "it": "it",
-    "tr": "tr",
-    "pt_pt": "pt",
-    "pt_br": "pt",
-    "vi": "vi",
-    "id": "id",
-    "th": "th",
-    "ms": "ms",
-    "ar": "ar",
-    "hi": "hi",
-    "mn_cy": "mn",
-    "mn_mo": "mn",
-    "km": "km",
-    "nb_no": "no",
-    "nn_no": "no",
-    "fa": "fa"
+    "auto": "Auto",
+    "zh_cn": "Simplified Chinese",
+    "zh_tw": "Traditional Chinese",
+    "en": "English",
+    "ja": "Japanese",
+    "ko": "Korean",
+    "fr": "French",
+    "es": "Spanish",
+    "ru": "Russian",
+    "de": "German",
+    "it": "Italian",
+    "tr": "Turkish",
+    "pt_pt": "Portuguese (Portugal)",
+    "pt_br": "Portuguese (Brazil)",
+    "vi": "Vietnamese",
+    "id": "Indonesian",
+    "th": "Thai",
+    "ms": "Malay",
+    "ar": "Arabic",
+    "hi": "Hindi",
+    "mn_cy": "Mongolian (Cyrillic)",
+    "mn_mo": "Mongolian (Traditional)",
+    "km": "Khmer",
+    "nb_no": "Norwegian (Bokmål)",
+    "nn_no": "Norwegian (Nynorsk)",
+    "fa": "Persian"
   }
 }
